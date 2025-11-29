@@ -1,0 +1,33 @@
+.features {
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding: 15rem 0;
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+  justify-content: space-between;
+  gap: 5rem;
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    grid-row: 1 /-1;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 2.5rem;
+  }
+
+  @include respond(big-tab-port) {
+    grid-column: center-start / center-end;
+    grid-row: 4/5;
+  }
+
+  @include respond(phone) {
+
+    //justify-content: center;
+    //padding: 10rem 2rem;
+  }
+}

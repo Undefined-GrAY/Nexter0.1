@@ -1,0 +1,110 @@
+.header {
+  background-image: linear-gradient(
+      rgba(16, 29, 44, 0.93),
+      rgba(16, 29, 44, 0.93)
+    ),
+    url(/img/house-5.jpeg);
+  background-size: cover;
+  background-position: center;
+  grid-column: sb-end / col-start 7;
+  color: $color-grey-light-2;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  //grid-template-rows: 1fr repeat(2, min-content) 1fr repeat(2, min-content);
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center;
+  row-gap: 2rem;
+  padding: 4rem 8rem 8rem 8rem;
+
+  @include respond(big-tab-port) {
+    grid-column: full-start / -1;
+  }
+  @include respond(phone) {
+   padding: 4rem 4rem 4rem 4rem;
+  }
+
+  &__logo {
+    height: 4rem;
+    justify-self: center;
+  }
+
+  &__seen {
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+
+  &__associates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    align-items: center;
+
+    img {
+      height: 2.5rem;
+      filter: brightness(70%);
+      justify-self: center;
+      @include respond(phone) {
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+.realtor {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  row-gap: 1rem;
+  place-content: center;
+  place-items: center;
+  color: $color-grey-light-1;
+  gap: 2rem;
+  padding: 3rem;
+
+  @include respond(big-tab-port) {
+    grid-column: full-start / -1;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-template-rows: repeat(3, min-content);
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    @include respond(big-tab-port) {
+      grid-template-columns: min-content max-content min-content max-content min-content max-content;
+      row-gap: 0rem;
+    }
+    @include respond(phone) {
+      grid-template-columns: min-content max-content;
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 4rem;
+    }
+  }
+  &__details {
+    display: grid;
+    grid-template-rows: min-content;
+    color: $color-grey-light-2;
+  }
+  &__img {
+    height: 8rem;
+    border-radius: 50%;
+    @include respond(phone) {
+      height: 6rem;
+    }
+  }
+  &__sales {
+    text-transform: uppercase;
+  }
+}

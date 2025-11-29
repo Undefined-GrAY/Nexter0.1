@@ -1,0 +1,29 @@
+.footer {
+  background-color: $color-secondary;
+  grid-column: sb-end / full-end;
+  padding: 8rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: $color-grey-light-2;
+  row-gap: 4rem;
+  font-size: 1.4rem;
+  @include respond(big-tab-port) {
+    grid-column: full-start / -1;
+    justify-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+
+    justify-content: space-between;
+    @include respond(big-tab-port) {
+      justify-items: center;
+    }
+  }
+
+  &__p {
+    text-align: center;
+  }
+}

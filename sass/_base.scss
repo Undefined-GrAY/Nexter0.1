@@ -1,0 +1,92 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px. 10 in 16 is 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(phone) {
+    font-size: 50%; //1rem = 8px. 8 in 16 is 56.25%
+  }
+  @include respond(small-phone) {
+    font-size: 50%; //1rem = 8px. 8 in 16 is 56.25%
+  }
+}
+
+body {
+  color: var(--color-grey-dark-2);
+  line-height: 1.6;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+/*
+// MEDIA QUERY MANAGER
+*
+0 - 600px: Phone  
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] 
+1800px +: Big desktop
+
+
+
+Phone Tablet portrait 
+Tablet landscape
+is where our normal styles apply 
+Big desktop
+$breakpoint arguement choices:
+phone tab-port tab-land big-desktop
+
+
+
+ORDER of Reponse: Base > typography > general layout > grid page layout >  components
+*/
+
+//helper class
+.u-margin-bottom-big {
+  margin-bottom: 4rem;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 2rem;
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.6rem;
+}

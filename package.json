@@ -1,0 +1,20 @@
+{
+  "name": "Nexter",
+  "version": "1.0.0",
+  "description": "Nexter webpage",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss css/style.css",
+    "prefix": "postcss css/style.css -o css/style.prefixed.css",
+    "build": "sass sass/main.scss css/style.css --style=compressed && npm run prefix"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^10.1.0",
+    "autoprefixer": "^10.4.17"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ]
+}
