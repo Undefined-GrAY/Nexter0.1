@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "sass --watch sass/main.scss css/style.css",
     "prefix": "postcss css/style.css -o css/style.prefixed.css",
-    "build": "sass sass/main.scss css/style.css --style=compressed && npm run prefix"
+    "build": "npx sass sass/main.scss css/style.css --style=compressed && npm run prefix"
   },
   "devDependencies": {
     "sass": "^1.77.0",
